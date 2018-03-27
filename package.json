@@ -1,0 +1,35 @@
+{
+  "name": "jeuzslovenskoslusne",
+  "version": "1.0.0",
+  "description": "On 26 February 2018 the world learned about the murder of investigative journalist Ján Kuciak and his fiancée Martina Kušnírová. We are still waiting for an independent investigation and a new government.",
+  "author": "Philo van Kemenade <philovankemenade@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "generate": "nuxt generate",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=release --cleanup",
+    "deploy:gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "moment": "^2.21.0",
+    "nuxt": "^1.0.0",
+    "tachyons": "^4.9.1",
+    "vue-i18n": "^7.4.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "cross-env": "^5.1.4",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.8.3",
+    "push-dir": "^0.4.1",
+    "sass-loader": "^6.0.7"
+  }
+}

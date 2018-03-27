@@ -1,0 +1,12 @@
+{
+  "home": {
+    "h1": "Je už Slovensko slušné?",
+    "p1": "26. februára 2018 sa svet dozvedel o vražde investigatívneho novinára Jána Kuciaka a jeho snúbenice Martiny Kušnírovej.",
+    "days": "<p>Odvtedy uplynulo</p><h2 class='tc fw9 f-headline mb0 mt3'>{daysSinceMurder} dní</h2>",
+    "p2": "Doteraz čakáme na nezávislé vyšetrenie vraždy a vládu bez prepojení na organizovaný zločin.",
+    "h3": "Každý deň zapálime jednu sviečku pre slušné Slovensko."
+  },
+  "TheFooter": {
+    "madeBy": "Vytvoril <a href='http://twitter.com/phivk' target='_blank'>@phivk</a> s <span class='red f3' title='láskou'>❤</span> na <span title='Slovensku'>🇸🇰</span>"
+  }
+}

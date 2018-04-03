@@ -59,6 +59,13 @@ module.exports = {
   */
   plugins: [
     '~/plugins/i18n.js',
+    '~/plugins/vue-social-sharing',
+  ],
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [,
+    '@nuxtjs/font-awesome',
   ],
   /*
   ** Generate configuration
@@ -86,6 +93,7 @@ module.exports = {
         })
       }
     },
-    vendor: ['vue-i18n']
+    vendor: ['vue-i18n'],
+    vendor: ['vue-social-sharing'],
   }
 }

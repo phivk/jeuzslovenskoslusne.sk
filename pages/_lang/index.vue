@@ -34,7 +34,7 @@ function get_days_since_murder() {
   let moment = require('moment');
   let now = moment();
   let murder = moment("26-02-2018", "DD-MM-YYYY");
-  return moment.duration(now.diff(murder)).days();
+  return Math.round(moment.duration(now.diff(murder)).asDays());
 }
 
 export default {

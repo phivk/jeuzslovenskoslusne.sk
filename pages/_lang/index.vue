@@ -12,6 +12,7 @@
       <p class="mt0" v-html="$t('home.p2')"></p>
       <h3 class="f3" v-html="$t('home.h3')"></h3>
     </div>
+    <SocialSharing/>
     <ul class="pa0 ma0 w-100 mw8 center list flex flex-wrap justify-start">
       <li v-for="day in daysSinceMurder" :key="day" class="flex-item flex">
         <CandleFlame 
@@ -29,17 +30,18 @@
 <script>
 import CandleFlame from '~/components/CandleFlame'
 import LanguageSwitch from '~/components/LanguageSwitch'
+import SocialSharing from '~/components/SocialSharing'
 
 function get_days_since_murder() {
   let moment = require('moment');
   let now = moment();
   let murder = moment("26-02-2018", "DD-MM-YYYY");
-  return moment.duration(now.diff(murder)).days();
+  return Math.round(moment.duration(now.diff(murder)).asDays());
 }
 
 export default {
   components: {
-    CandleFlame, LanguageSwitch
+    CandleFlame, LanguageSwitch, SocialSharing
   },
   data () {
     return {
@@ -56,7 +58,6 @@ export default {
 .flex-item {
   width: 14.3%; /* fallback */
   width: calc(100% / 7);
-  margin-bottom: -2rem;
-  margin-top: -2rem;
+  margin-bottom: -4rem;
 }
 </style>

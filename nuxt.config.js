@@ -3,7 +3,8 @@ module.exports = {
   ** Router 
   */
   router: {
-    middleware: 'i18n'
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/jeuzslovenskoslusne.sk/' : '/',
+    middleware: 'i18n',
   },
   /*
   ** Headers of the page

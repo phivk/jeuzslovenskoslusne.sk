@@ -5,7 +5,7 @@
       height: '150px'
     }">
       <div class="shadows"></div>
-      <div class="top" v-bind:style="{animation: 'flame-up ' + flameUpTime + 's infinite'}"></div>
+      <div class="top" v-bind:style="{animation: 'flame-up ' + flameUpTime + 's infinite, blink .1s infinite'}"></div>
       <div class="middle"></div>
       <div class="bottom"></div>
     </div>
@@ -39,7 +39,6 @@ $yellow-grey: #58523a;
   position: relative;
   height: 400px;
   align-self: flex-end;
-  animation: blink .1s infinite;
 }
 .wick{
   position: absolute;
@@ -106,7 +105,7 @@ $yellow-grey: #58523a;
       0 0px 150px 10px $orange, //global
       0 -10px 2px 4px white,
       0 -5px 3px 3px white;
-     animation: flame-up 4s infinite;
+    animation: flame-up 4s infinite, blink .1s infinite;
   }
   .shadows{
     position: absolute;
@@ -122,6 +121,7 @@ $yellow-grey: #58523a;
       5px 30px 5px 13px $orange,
       5px 50px 5px 13px $orange,
       0 75px 50px 30px black;
+    animation: blink .1s infinite;
   }
   .bottom{
     transform: scale(0.9);
@@ -175,17 +175,12 @@ $yellow-grey: #58523a;
   50%{transform: skewX(3deg);}
 }
 @keyframes flame-up{
-  50% { box-shadow:
-      0 0px 0px 3px white,
-      0 -38px 1px 2px white, 
-      0 -41px 2px 3px gold, 
-      0 -50px 5px 4px $orange,  //orange top
-      0 0px 150px 10px $orange, //orange global
-      0 -10px 2px 4px white,
-      0 -5px 3px 3px white;
+  50% { 
+    transform: scaleY(1.1);
+    transform-origin: bottom;
   }
 }
 @keyframes blink{
-  50% {opacity: 0.95;}
+  50% {opacity: 0.9;}
 }
 </style>

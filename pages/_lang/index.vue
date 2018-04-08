@@ -1,8 +1,8 @@
 <script>
 import CandleFlame from '~/components/CandleFlame'
 import LanguageSwitch from '~/components/LanguageSwitch'
-import SocialSharing from '~/components/SocialSharing'
 import ModalWindow from '~/components/ModalWindow'
+import ButtonGhost from '~/components/ButtonGhost'
 
 function get_days_since_murder() {
   let moment = require('moment');
@@ -13,7 +13,10 @@ function get_days_since_murder() {
 
 export default {
   components: {
-    CandleFlame, LanguageSwitch, SocialSharing, ModalWindow
+    'candle-flame': CandleFlame, 
+    'language-switch': LanguageSwitch,
+    'modal-window': ModalWindow, 
+    'button-ghost': ButtonGhost
   },
   data () {
     return {
@@ -36,7 +39,7 @@ export default {
   <div class="ph2 tc">
     <header class="ma3">
       <nav class="flex justify-end">
-        <LanguageSwitch/>
+        <language-switch/>
       </nav>
       <h1 class="tc mt5 mt6-l f1 rotate">{{ $t('home.h1') }}</h1>
     </header>
@@ -47,23 +50,23 @@ export default {
       <h3 class="f3" v-html="$t('home.h3')"></h3>
     </section>
     <div class="lh-extra">
-      <span @click="showModal" class="btn-ghost bg-animate hover-bg-dark-gray">
-        <i class="w1 fa fa-facebook"></i>&nbsp;Facebook
-      </span>
-      <span @click="showModal" class="btn-ghost bg-animate hover-bg-dark-gray">
-        <i class="w1 fa fa-twitter"></i>&nbsp;Twitter
-      </span>
-      <span @click="showModal" class="btn-ghost bg-animate hover-bg-dark-gray">
-        <i class="w1 fa fa-envelope"></i>&nbsp;Email
-      </span>
-      <span @click="showModal" class="btn-ghost bg-animate hover-bg-dark-gray">
-        <i class="w1 fa fa-whatsapp"></i>&nbsp;Whatsapp
-      </span>
-      <span @click="showModal" class="btn-ghost bg-animate hover-bg-dark-gray">
-        <i class="w1 fa fa-comments"></i>&nbsp;SMS
-      </span>
+      <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
+          <i class="w1 fa fa-facebook"></i>&nbsp;Facebook
+      </button-ghost>
+      <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
+          <i class="w1 fa fa-twitter"></i>&nbsp;Twitter
+      </button-ghost>
+      <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
+          <i class="w1 fa fa-envelope"></i>&nbsp;Email
+      </button-ghost>
+      <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
+          <i class="w1 fa fa-whatsapp"></i>&nbsp;Whatsapp
+      </button-ghost>
+      <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
+          <i class="w1 fa fa-comments"></i>&nbsp;SMS
+      </button-ghost>
     </div>
-    <ModalWindow
+    <modal-window
       v-show="isModalVisible"
       @close="closeModal"
     />
@@ -71,7 +74,7 @@ export default {
     <section>
       <ul class="pa0 ma0 w-100 mw8 center list flex flex-wrap justify-start">
         <li v-for="day in daysSinceMurder" :key="day" class="flex-item flex">
-          <CandleFlame 
+          <candle-flame 
             :day="day" 
             :moveTime="3 + (Math.random()-0.5) * 3"
             :flameUpTime="4 + (Math.random()-0.5) * 4"
@@ -92,16 +95,6 @@ export default {
   width: 14.3%; /* fallback */
   width: calc(100% / 7);
   margin-bottom: -4rem;
-}
-.btn-ghost {
-  padding: 0.25rem;
-  margin: 0.25rem;
-  border: solid 1px;
-  border-radius: .25rem;
-  cursor: pointer;
-}
-.fa {
-  display: inline;
 }
 .lh-extra {
   line-height: 2.5rem;

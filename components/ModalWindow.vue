@@ -86,7 +86,7 @@
   .modal {
     display: flex;
     flex-direction: column;
-    max-height: 100%;
+    max-height: 100vh;
     overflow-y: scroll;
   }
   .modal-fade-enter,

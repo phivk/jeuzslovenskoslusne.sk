@@ -1,8 +1,9 @@
 <script>
 import CandleFlame from '~/components/CandleFlame'
 import LanguageSwitch from '~/components/LanguageSwitch'
-import ModalWindow from '~/components/ModalWindow'
 import ButtonGhost from '~/components/ButtonGhost'
+import SocialSharing from '~/components/SocialSharing'
+import ModalWindow from '~/components/ModalWindow'
 
 function get_days_since_murder() {
   let moment = require('moment');
@@ -15,6 +16,7 @@ export default {
   components: {
     'candle-flame': CandleFlame, 
     'language-switch': LanguageSwitch,
+    'social-sharing': SocialSharing,
     'modal-window': ModalWindow, 
     'button-ghost': ButtonGhost
   },
@@ -69,7 +71,33 @@ export default {
     <modal-window
       v-show="isModalVisible"
       @close="closeModal"
-    />
+    >
+      <template slot="header">
+        <h2 class="f3">
+          So you'd like to share this thing with your friends or followers...
+        </h2>
+      </template>
+      <template slot="body">
+        <p>
+          It's important to discuss the things we care about. But when we do so via social networks, something funny happens.
+        </p>
+        <p>
+          Online, we are mostly connected to people who share our opinions. That's comfortable, but also creates social bubbles.
+        </p>
+        <p>
+          Before you share this page with your bubble, can you think of someone who might feel different than you? Perhaps a colleague, someone on your sports team or a family member?
+        </p>
+        <p class="i">
+          I think we'd all learn a lot if we'd have a conversation with that other person about what decency means to each of us.
+        </p>
+      </template>
+      <template slot="footer">
+        <h3 class="f4">
+          Let's share this already!
+        </h3>
+        <social-sharing/>
+      </template>
+    </modal-window>
 
     <section>
       <ul class="pa0 ma0 w-100 mw8 center list flex flex-wrap justify-start">

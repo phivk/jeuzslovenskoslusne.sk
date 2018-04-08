@@ -21,7 +21,7 @@
         aria-describedby="modalDescription"
       >
         <header 
-          class="modal-header"
+          class="modal-header ph3"
           id="modalTitle"
         >
           <slot name="header">
@@ -30,7 +30,7 @@
             </h2>
             <button
               type="button"
-              class="absolute top-0 right-0 pa2 bn bg-transparent pointer hover-70"
+              class="absolute top-0 right-0 pa3 bn bg-transparent pointer hover-70"
               @click="close"
               aria-label="Close modal"
             >
@@ -57,7 +57,7 @@
             </p>
           </slot>
         </section>
-        <footer class="modal-footer">
+        <footer class="modal-footer pb3">
           <slot name="footer">
             <h2 class="f4">
               Let's share this already!
@@ -86,6 +86,8 @@
   .modal {
     display: flex;
     flex-direction: column;
+    max-height: 100%;
+    overflow-y: scroll;
   }
   .modal-fade-enter,
   .modal-fade-leave-active {

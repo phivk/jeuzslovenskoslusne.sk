@@ -36,7 +36,7 @@ export default {
 </script>
 
 <template>
-  <div class="ph2 tc">
+  <div class="ph2 tc" v-bind:class="{ 'scroll-off' : isModalVisible }">
     <header class="ma3">
       <nav class="flex justify-end">
         <language-switch/>
@@ -98,5 +98,9 @@ export default {
 }
 .lh-extra {
   line-height: 2.5rem;
+}
+.scroll-off {
+  overflow: hidden;
+  height: 100vh;
 }
 </style>

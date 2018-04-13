@@ -16,11 +16,11 @@
         <network network="email" class="btn-ghost bg-animate hover-bg-moon-gray">
           <i class="w1 fa fa-envelope"></i>&nbsp;Email
         </network>
-        <network network="whatsapp" class="btn-ghost bg-animate hover-bg-moon-gray">
-          <i class="w1 fa fa-whatsapp dn-ns"></i>&nbsp;Whatsapp
+        <network network="whatsapp" class="btn-ghost bg-animate hover-bg-moon-gray dn-ns">
+          <i class="w1 fa fa-whatsapp"></i>&nbsp;Whatsapp
         </network>
-        <network network="sms" class="btn-ghost bg-animate hover-bg-moon-gray">
-          <i class="w1 fa fa-comments dn-ns"></i>&nbsp;SMS
+        <network network="sms" class="btn-ghost bg-animate hover-bg-moon-gray dn-ns">
+          <i class="w1 fa fa-comments"></i>&nbsp;SMS
         </network>
       </div>
     </social-sharing>

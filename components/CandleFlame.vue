@@ -1,16 +1,16 @@
 <template>
-  <div class="candle" :data-day="day" v-bind:style="{transform: 'scale(0.4) translateY(' + (100 - waxPercentage) +'%)'}">
-    <div class="flame" v-bind:style="{
+  <div class="candle" :data-day="day" :style="{transform: 'scale(0.4) translateY(' + (100 - waxPercentage) +'%)'}">
+    <div class="flame" :style="{
       animation: 'move ' + moveTime + 's infinite, move-left ' + moveTime + 's infinite',
       height: '150px'
     }">
       <div class="shadows"></div>
-      <div class="top" v-bind:style="{animation: 'flame-up ' + flameUpTime + 's infinite, blink .1s infinite'}"></div>
+      <div class="top" :style="{animation: 'flame-up ' + flameUpTime + 's infinite, blink .1s infinite'}"></div>
       <div class="middle"></div>
       <div class="bottom"></div>
     </div>
     <div class="wick"></div>
-    <div class="wax" v-bind:style="{height: waxPercentage + '%'}"></div>
+    <div class="wax" :style="{height: waxPercentage + '%'}"></div>
   </div>
 </template>
 

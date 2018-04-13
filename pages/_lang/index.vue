@@ -79,10 +79,10 @@ export default {
         <button-ghost 
           v-for="button in sharingButtons" 
           :key="button.text" 
-          v-bind:text="button.text" 
-          v-bind:iconClass="button.iconClass" 
+          :text="button.text" 
+          :iconClass="button.iconClass" 
           v-on:click.native="showModal" 
-          v-bind:class="button.class"
+          :class="button.class"
           class="bg-animate hover-bg-dark-gray"
         />
       </div>

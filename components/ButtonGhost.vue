@@ -7,7 +7,7 @@
 
 <template>
   <span class="btn-ghost dib">
-    <slot><i v-if="iconClass" class="w1 fa" v-bind:class="iconClass"></i>&nbsp;{{text}}</slot>
+    <slot><i v-if="iconClass" class="w1 fa" :class="iconClass"></i>&nbsp;{{text}}</slot>
   </span>
 </template>
 

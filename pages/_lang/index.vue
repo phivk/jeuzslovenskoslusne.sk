@@ -43,9 +43,9 @@ export default {
       <nav class="flex justify-end">
         <language-switch/>
       </nav>
-      <h1 class="tc mt5 mt6-l f1 rotate">{{ $t('header.h1') }}</h1>
+      <h1 class="tc mt5 f1 rotate">{{ $t('header.h1') }}</h1>
     </header>
-    <main class="measure center tc">
+    <main class="mw6 center tc">
       <p v-html="$t('main.p1')"></p>
       <div v-html="$t('main.days', { daysSinceMurder: daysSinceMurder })"></div>
       <p class="mt0" v-html="$t('main.p2')"></p>

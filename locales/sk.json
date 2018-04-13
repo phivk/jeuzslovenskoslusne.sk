@@ -4,7 +4,7 @@
   },
   "main": {
     "p1": "26. februára 2018 sa svet dozvedel o vražde investigatívneho novinára Jána Kuciaka a jeho snúbenice Martiny Kušnírovej.",
-    "days": "<p>Odvtedy uplynulo</p><h2 class='tc fw9 f-headline mb0 mt3'>{daysSinceMurder} dní</h2>",
+    "days": "<p class='mb2'>Odvtedy uplynulo</p><h2 class='tc fw9 f-headline mb0 mt2'>{daysSinceMurder} dní</h2>",
     "p2": "Doteraz čakáme na nezávislé vyšetrenie vraždy a vládu bez prepojení na organizovaný zločin.",
     "h3": "Každý deň zapálime jednu sviečku pre slušné Slovensko."
   },

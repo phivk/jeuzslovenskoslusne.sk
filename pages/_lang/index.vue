@@ -99,7 +99,7 @@ export default {
         </li>
       </ul>
     </section>
-    <footer class="mv4" v-html="$t('TheFooter.madeBy')"></footer>
+    <footer class="mv4" v-html="$t('footer.madeBy')"></footer>
   </div>
 </template>
 

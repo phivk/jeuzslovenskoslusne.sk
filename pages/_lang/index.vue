@@ -43,62 +43,50 @@ export default {
       <nav class="flex justify-end">
         <language-switch/>
       </nav>
-      <h1 class="tc mt5 mt6-l f1 rotate">{{ $t('home.h1') }}</h1>
+      <h1 class="tc mt5 mt6-l f1 rotate">{{ $t('header.h1') }}</h1>
     </header>
-    <section class="measure center tc">
-      <p v-html="$t('home.p1')"></p>
-      <div v-html="$t('home.days', { daysSinceMurder: daysSinceMurder })"></div>
-      <p class="mt0" v-html="$t('home.p2')"></p>
-      <h3 class="f3" v-html="$t('home.h3')"></h3>
-    </section>
-    <div class="lh-extra">
-      <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
-          <i class="w1 fa fa-facebook"></i>&nbsp;Facebook
-      </button-ghost>
-      <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
-          <i class="w1 fa fa-twitter"></i>&nbsp;Twitter
-      </button-ghost>
-      <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
-          <i class="w1 fa fa-envelope"></i>&nbsp;Email
-      </button-ghost>
-      <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
-          <i class="w1 fa fa-whatsapp"></i>&nbsp;Whatsapp
-      </button-ghost>
-      <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
-          <i class="w1 fa fa-comments"></i>&nbsp;SMS
-      </button-ghost>
-    </div>
+    <main class="measure center tc">
+      <p v-html="$t('main.p1')"></p>
+      <div v-html="$t('main.days', { daysSinceMurder: daysSinceMurder })"></div>
+      <p class="mt0" v-html="$t('main.p2')"></p>
+      <h3 class="f3" v-html="$t('main.h3')"></h3>
+      <div class="lh-extra">
+        <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
+            <i class="w1 fa fa-facebook"></i>&nbsp;Facebook
+        </button-ghost>
+        <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
+            <i class="w1 fa fa-twitter"></i>&nbsp;Twitter
+        </button-ghost>
+        <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
+            <i class="w1 fa fa-envelope"></i>&nbsp;Email
+        </button-ghost>
+        <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
+            <i class="w1 fa fa-whatsapp"></i>&nbsp;Whatsapp
+        </button-ghost>
+        <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
+            <i class="w1 fa fa-comments"></i>&nbsp;SMS
+        </button-ghost>
+      </div>
+    </main>
     <modal-window
       v-show="isModalVisible"
       @close="closeModal"
     >
       <template slot="header">
         <h2 class="f3">
-          So you'd like to share this thing with your friends or followers...
+          {{ $t('ModalWindow.headerHeading') }}
         </h2>
       </template>
       <template slot="body">
-        <p>
-          It's important to discuss the things we care about. But when we do so via social networks, something funny happens.
-        </p>
-        <p>
-          Online, we are mostly connected to people who share our opinions. That's comfortable, but also creates social bubbles.
-        </p>
-        <p>
-          Before you share this page with your bubble, can you think of someone who might feel different than you? Perhaps a colleague, someone on your sports team or a family member?
-        </p>
-        <p class="i">
-          I think we'd all learn a lot if we'd have a conversation with that other person about what decency means to each of us.
-        </p>
+        <div v-html="$t('ModalWindow.body')"></div>
       </template>
       <template slot="footer">
         <h3 class="f4">
-          Let's share this already!
+          {{ $t('ModalWindow.footerHeading') }}
         </h3>
         <social-sharing/>
       </template>
     </modal-window>
-
     <section>
       <ul class="pa0 ma0 w-100 mw8 center list flex flex-wrap justify-start">
         <li v-for="day in daysSinceMurder" :key="day" class="flex-item flex">

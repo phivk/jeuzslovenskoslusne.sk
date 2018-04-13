@@ -1,12 +1,19 @@
 {
-  "home": {
-    "h1": "Je už Slovensko slušné?",
+  "header": {
+    "h1": "Je už Slovensko slušné?"
+  },
+  "main": {
     "p1": "26. februára 2018 sa svet dozvedel o vražde investigatívneho novinára Jána Kuciaka a jeho snúbenice Martiny Kušnírovej.",
     "days": "<p>Odvtedy uplynulo</p><h2 class='tc fw9 f-headline mb0 mt3'>{daysSinceMurder} dní</h2>",
     "p2": "Doteraz čakáme na nezávislé vyšetrenie vraždy a vládu bez prepojení na organizovaný zločin.",
     "h3": "Každý deň zapálime jednu sviečku pre slušné Slovensko."
   },
-  "TheFooter": {
+  "ModalWindow": {
+    "headerHeading": "So you'd like to share this thing with your friends or followers...",
+    "body": "<p>It's important to discuss the things we care about. But when we do so via social networks, something funny happens.</p><p>Online, we are mostly connected to people who share our opinions. That's comfortable, but also creates social bubbles.</p><p>Before you share this page with your bubble, can you think of someone who might feel different than you? Perhaps a colleague, someone on your sports team or a family member?</p><p class='i'>I think we'd all learn a lot if we'd have a conversation with that other person about what decency means to each of us.</p>",
+    "footerHeading": "Let's share this already!"
+  },
+  "footer": {
     "madeBy": "Vytvoril <a href='http://twitter.com/phivk' target='_blank'>@phivk</a> s <span class='red f3' title='láskou'>❤</span> na <span title='Slovensku'>🇸🇰</span>"
   }
 }

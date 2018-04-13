@@ -1,12 +1,19 @@
 {
-  "home": {
-    "h1": "Is Slovakia decent yet?",
+  "header": {
+    "h1": "Is Slovakia decent yet?"    
+  },
+  "main": {
     "p1": "On 26 February the world learned about the murder of investigative journalist Ján Kuciak and his fiancée Martina Kušnírová.",
     "days": "<h2 class='tc fw9 f-headline mb0 mt4'>{daysSinceMurder} days</h2><p>have passed since then.</p>",
     "p2": "We are still waiting for an independent investigation and a government without ties to maffia.",
     "h3": "Every day we light a candle here for a decent Slovakia."
   },
-  "TheFooter": {
+  "ModalWindow": {
+    "headerHeading": "So you'd like to share this thing with your friends or followers...",
+    "body": "<p>It's important to discuss the things we care about. But when we do so via social networks, something funny happens.</p><p>Online, we are mostly connected to people who share our opinions. That's comfortable, but also creates social bubbles.</p><p>Before you share this page with your bubble, can you think of someone who might feel different than you? Perhaps a colleague, someone on your sports team or a family member?</p><p class='i'>I think we'd all learn a lot if we'd have a conversation with that other person about what decency means to each of us.</p>",
+    "footerHeading": "Let's share this already!"
+  },
+  "footer": {
     "madeBy": "Made with <span class='red f3'>❤</span> in <span title='Slovakia'>🇸🇰</span> by <a href='http://twitter.com/phivk' target='_blank'>@phivk</a>"
   }
 }

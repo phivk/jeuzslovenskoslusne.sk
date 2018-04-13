@@ -1,12 +1,13 @@
 <script>
   export default {
-    name: 'button-host'
+    name: 'button-host',
+    props: ['text', 'iconClass']
   };
 </script>
 
 <template>
-  <span class="btn-ghost">
-    <slot><i class="w1 fa fa-link"></i>&nbsp;Click me!</slot>
+  <span class="btn-ghost dib">
+    <slot><i v-if="iconClass" class="w1 fa" v-bind:class="iconClass"></i>&nbsp;{{text}}</slot>
   </span>
 </template>
 

@@ -24,6 +24,30 @@ export default {
     return {
       daysSinceMurder: get_days_since_murder(),
       isModalVisible: false,
+      sharingButtons: [
+        {
+          'text': 'Facebook',
+          'iconClass': 'fa-facebook'
+        },
+        {
+          'text': 'Twitter',
+          'iconClass': 'fa-twitter'
+        },
+        {
+          'text': 'Email',
+          'iconClass': 'fa-envelope'
+        },
+        {
+          'text': 'Whatsapp',
+          'iconClass': 'fa-whatsapp',
+          'class': 'dn-ns'
+        },
+        {
+          'text': 'SMS',
+          'iconClass': 'fa-comments',
+          'class': 'dn-ns'
+        }
+      ]
     }
   },
   methods: {
@@ -50,22 +74,17 @@ export default {
       <div v-html="$t('main.days', { daysSinceMurder: daysSinceMurder })"></div>
       <p class="mt0" v-html="$t('main.p2')"></p>
       <h3 class="f3" v-html="$t('main.h3')"></h3>
-      <div class="lh-extra">
-        <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
-            <i class="w1 fa fa-facebook"></i>&nbsp;Facebook
-        </button-ghost>
-        <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
-            <i class="w1 fa fa-twitter"></i>&nbsp;Twitter
-        </button-ghost>
-        <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
-            <i class="w1 fa fa-envelope"></i>&nbsp;Email
-        </button-ghost>
-        <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
-            <i class="w1 fa fa-whatsapp"></i>&nbsp;Whatsapp
-        </button-ghost>
-        <button-ghost v-on:click.native="showModal" class="bg-animate hover-bg-dark-gray">
-            <i class="w1 fa fa-comments"></i>&nbsp;SMS
-        </button-ghost>
+      
+      <div>
+        <button-ghost 
+          v-for="button in sharingButtons" 
+          :key="button.text" 
+          v-bind:text="button.text" 
+          v-bind:iconClass="button.iconClass" 
+          v-on:click.native="showModal" 
+          v-bind:class="button.class"
+          class="bg-animate hover-bg-dark-gray"
+        />
       </div>
     </main>
     <modal-window
